@@ -4,14 +4,12 @@ class pattern
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int rows;
-        rows=sc.nextInt();
-        for(int i=rows;i>=1;i--)
+        int row_size,out,in;
+        row_size=sc.nextInt();
+        for(out=row_size;out>=1;out--)
         {
-            for(int j=1;j<=i;j++)
-            {
-                System.out.print(j+"");
-            }
+            for(in=row_size;in>=1;in--)
+            System.out.print(in+" ");
             System.out.println();
         }
         sc.close();
