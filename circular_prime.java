@@ -2,45 +2,45 @@ import java.util.Scanner;
 class Sample
 {
     public static boolean isPrime(int m)
-{
-int count=0;
-for(int i=2;i<=(int)Math.sqrt(m);i++)
-{
-if(m%i==0)
-count++;
-}
-if(count==0)
-return true;
-else
-return false;
-}
-public static int reverse(int p)
-{
-    int i,sum=0,r;
-    while(p>0)
     {
-        r=p%10;
-        sum=sum*10+r;
-        p=p/10;
+        int count=0;
+        for (int i=2;i<=(int)Math.sqrt(m);i++)
+        {
+            if(m%i==0)
+            count++;
+        }
+        if(count==0)
+        return true;
+        else
+        return false;
     }
-    return sum;
-}
-public static void main(String[] args){
-    Scanner sc=new Scanner(System.in);
-    int m;
-    m=sc.nextInt();
-    if(!isPrime(m))
+    public static int Reverse(int p)
     {
-    System.out.println("not prime");
+        int i,sum=0,r;
+        while(p>0)
+        {
+            r=p%10;
+            sum=sum*10+r;
+            p=p/10;
+        }
+        return sum;
     }
-    else if(isPrime(reverse(m)))
+    public static void main(String args[])
     {
-
-    System.out.println("circular prime");
+        Scanner sc=new Scanner(System.in);
+        int m;
+        m=sc.nextInt();
+        if(!isPrime(m))
+        {
+            System.out.println("not prime");
+        }
+        else if(isPrime(Reverse(m)))
+        {
+            System.out.println("circular prime");
+        }
+        else
+        {
+            System.out.println("prime but not a circular prime");
+        }
     }
-    else
-    {
-    System.out.println("prime but not a circular prime");
-    }
-}
 }
